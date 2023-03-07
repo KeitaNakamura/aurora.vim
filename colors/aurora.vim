@@ -98,7 +98,7 @@ call s:hi('DiffDelete',                s:red,           s:base2,         'none')
 call s:hi('DiffText',                  s:blue,          s:base1,         'none')
 call s:hi('ErrorMsg',                  s:red,           s:base1,         'bold')
 call s:hi('FoldColumn',                s:base5,         s:base2,         '')
-call s:hi('Folded',                    s:base3,         s:base1,         '')
+call s:hi('Folded',                    s:base4,         s:base1,         '')
 call s:hi('Search',                    s:golden_yellow, s:base3,         'bold')
 call s:hi('LineNr',                    s:base3,         '',              '')
 call s:hi('MatchParen',                s:light_blue,    s:base1,         'underline,bold')
@@ -179,5 +179,7 @@ hi link SignifySignDelete GitGutterDelete
 augroup FocusEvent
 autocmd!
 autocmd FocusGained * call s:hi('Normal', s:base6, s:base1, 'none')
-autocmd FocusLost   * call s:hi('Normal', s:base5, s:base2, 'none')
+autocmd FocusGained * call s:hi('Folded', s:base4, s:base1, '')
+autocmd FocusLost   * call s:hi('Normal', s:base6, s:base2, 'none')
+autocmd FocusLost   * call s:hi('Folded', s:base4, s:base2, '')
 augroup end
