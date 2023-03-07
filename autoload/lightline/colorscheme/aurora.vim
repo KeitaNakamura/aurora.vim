@@ -2,7 +2,7 @@ if(exists("g:lightline"))
 
   " palette
   let s:base1 = '#242B36'
-  let s:base2 = '#2B3541'
+  let s:base2 = '#272F3B'
   let s:base3 = '#3A4959'
   let s:base4 = '#567085'
   let s:base5 = '#658595'

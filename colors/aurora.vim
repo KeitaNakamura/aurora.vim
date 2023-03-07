@@ -12,7 +12,7 @@ let g:aurora#use_terminal_color16 = get(g:, 'aurora#use_terminal_color16', 0)
 
 " palette
 let s:base1 = '#242B36'
-let s:base2 = '#2B3541'
+let s:base2 = '#272F3B'
 let s:base3 = '#3D4958'
 let s:base4 = '#5C7083'
 let s:base5 = '#6C8493'
