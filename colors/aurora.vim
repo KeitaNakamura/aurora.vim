@@ -175,3 +175,9 @@ hi! link texMathZone Function
 hi link SignifySignAdd GitGutterAdd
 hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
+
+augroup FocusEvent
+autocmd!
+autocmd FocusGained * call s:hi('Normal', s:base6, s:base1, 'none')
+autocmd FocusLost   * call s:hi('Normal', s:base5, s:base2, 'none')
+augroup end
