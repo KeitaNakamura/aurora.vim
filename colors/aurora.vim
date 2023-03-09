@@ -9,6 +9,7 @@ let g:colors_name = 'aurora'
 
 let g:aurora#italics      = get(g:, 'aurora#italics', 0)
 let g:aurora#smart_cursor = get(g:, 'aurora#smart_cursor', 0)
+let g:aurora#focus_effect = get(g:, 'aurora#focus_effect', 0)
 
 " palette
 let s:base1 = '#242B36'
@@ -112,6 +113,17 @@ else
   call s:hi('Cursor', s:base2, s:base6, '')
 endif
 
+
+if g:aurora#focus_effect == 1
+  augroup FocusEvent
+  autocmd!
+  autocmd FocusGained * call s:hi('Normal', s:base6, s:base1, 'none')
+  autocmd FocusGained * call s:hi('Folded', s:base4, s:base1, '')
+  autocmd FocusLost   * call s:hi('Normal', s:base6, s:base2, 'none')
+  autocmd FocusLost   * call s:hi('Folded', s:base4, s:base2, '')
+  augroup end
+endif
+
 " Standard Syntax
 call s:hi('Comment',                   s:base5,         '',         'italic')
 call s:hi('Constant',                  s:red,           '',         '')
@@ -161,11 +173,3 @@ hi! link texMathZone Function
 hi link SignifySignAdd GitGutterAdd
 hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
-
-augroup FocusEvent
-autocmd!
-autocmd FocusGained * call s:hi('Normal', s:base6, s:base1, 'none')
-autocmd FocusGained * call s:hi('Folded', s:base4, s:base1, '')
-autocmd FocusLost   * call s:hi('Normal', s:base6, s:base2, 'none')
-autocmd FocusLost   * call s:hi('Folded', s:base4, s:base2, '')
-augroup end
