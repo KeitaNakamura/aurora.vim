@@ -35,7 +35,7 @@ if(exists("g:lightline"))
         \ [s:base6, s:base3]]
   let s:p.normal.right = [
         \ [s:base1, s:base5],
-        \ [s:base1, s:base3]]
+        \ [s:base1, s:base4]]
   let s:p.normal.error = [
         \ [ s:base2, s:red]]
   let s:p.normal.warning = [
