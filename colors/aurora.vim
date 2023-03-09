@@ -7,7 +7,8 @@ endif
 set background=dark
 let g:colors_name = 'aurora'
 
-let g:aurora#italics = get(g:, 'aurora#italics', 0)
+let g:aurora#italics      = get(g:, 'aurora#italics', 0)
+let g:aurora#smart_cursor = get(g:, 'aurora#smart_cursor', 0)
 
 " palette
 let s:base1 = '#242B36'
@@ -67,7 +68,6 @@ endfun
 
 " Vim Editor
 call s:hi('ColorColumn',               '',              s:base2,         '')
-call s:hi('Cursor',                    '',              '',              'inverse')
 call s:hi('CursorColumn',              '',              s:base2,         '')
 call s:hi('CursorLine',                '',              s:base2,         'none')
 call s:hi('CursorLineNr',              s:light_blue,    s:base2,         'none')
@@ -105,6 +105,12 @@ call s:hi('Visual',                    s:base6,         s:base3,         '')
 call s:hi('WarningMsg',                s:red,           '',              '')
 call s:hi('WildMenu',                  s:base2,         s:green,	       '')
 call s:hi('VertSplit',                 s:base5,         s:base1,         'none')
+
+if g:aurora#smart_cursor == 1
+  call s:hi('Cursor', ''     , ''     , 'inverse')
+else
+  call s:hi('Cursor', s:base2, s:base6, '')
+endif
 
 " Standard Syntax
 call s:hi('Comment',                   s:base5,         '',         'italic')
