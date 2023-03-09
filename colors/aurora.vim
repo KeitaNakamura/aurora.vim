@@ -8,7 +8,6 @@ set background=dark
 let g:colors_name = 'aurora'
 
 let g:aurora#italics = get(g:, 'aurora#italics', 0)
-let g:aurora#use_terminal_color16 = get(g:, 'aurora#use_terminal_color16', 0)
 
 " palette
 let s:base1 = '#242B36'
@@ -27,25 +26,6 @@ let s:pink          = '#D197A2'
 let s:teal          = '#67AFA7'
 let s:golden_yellow = '#C2993D'
 let s:light_blue    = '#76B2D2'
-
-if g:aurora#use_terminal_color16 == 1
-  let s:base1 = 0
-  let s:base2 = 14
-  let s:base3 = 13
-  let s:base4 = 8
-  let s:base5 = 7
-  let s:base6 = 15
-  let s:red           = 1
-  let s:green         = 2
-  let s:yellow        = 3
-  let s:blue          = 4
-  let s:purple        = 5
-  let s:orange        = 6
-  let s:pink          = 9
-  let s:teal          = 10
-  let s:golden_yellow = 11
-  let s:light_blue    = 12
-endif
 
 " neovim terminal colors
 if has('nvim')
