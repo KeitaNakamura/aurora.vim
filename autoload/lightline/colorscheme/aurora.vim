@@ -4,7 +4,7 @@ if(exists("g:lightline"))
   let s:base1 = '#242B36'
   let s:base2 = '#29313E'
   let s:base3 = '#3A4959'
-  let s:base4 = '#567085'
+  let s:base4 = '#4D6477'
   let s:base5 = '#658595'
   let s:base6 = '#AABBC4'
   let s:red           = '#DC657D'
