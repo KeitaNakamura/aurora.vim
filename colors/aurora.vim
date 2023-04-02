@@ -39,12 +39,13 @@ if has('nvim')
   let g:terminal_color_5  = s:purple
   let g:terminal_color_6  = s:orange
   let g:terminal_color_7  = s:base5
-  let g:terminal_color_8  = s:base2
+  let g:terminal_color_8  = s:base4
   let g:terminal_color_9  = s:pink
   let g:terminal_color_10 = s:teal
   let g:terminal_color_11 = s:golden_yellow
   let g:terminal_color_12 = s:light_blue
-  let g:terminal_color_13 = s:base3
+  let g:terminal_color_13 = s:base2
+  let g:terminal_color_14 = s:base3
   let g:terminal_color_15 = s:base6
 endif
 
