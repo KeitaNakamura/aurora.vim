@@ -89,6 +89,7 @@ call s:hi('MoreMsg',                   s:green,         '',              '')
 call s:hi('NonText',                   s:base5,         '',              'none')
 call s:hi('Normal',                    s:base6,         s:base1,         'none')
 call s:hi('Pmenu',                     s:base6,         s:base2,         '')
+call s:hi('NormalFloat',               s:base6,         s:base2,         '') " for neovim
 call s:hi('PmenuSbar',                 '',              s:base2,         '')
 call s:hi('PmenuSel',                  s:base2,         s:green,         '')
 call s:hi('PmenuThumb',                '',              s:base5,         '')
