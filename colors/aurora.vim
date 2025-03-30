@@ -169,7 +169,8 @@ call s:hi('IndentGuidesOdd',           '',           s:base2,    '')
 call s:hi('IndentGuidesEven',          '',           s:base2,    '')
 
 " coc-nvim
-call s:hi('CocSearch', s:golden_yellow, s:base2, '')
+call s:hi('CocSearch',  s:golden_yellow, s:base2, '')
+call s:hi('CocMenuSel', s:base2,         s:green, '')
 
 " vimtex
 hi! link texMathZone Function
